@@ -1,0 +1,8 @@
+<?php
+/*   __________________________________________________
+    |  Obfuscated by YAK Pro - Php Obfuscator  2.0.16  |
+    |              on 2025-06-20 01:47:48              |
+    |    GitHub: https://github.com/pk-fr/yakpro-po    |
+    |__________________________________________________|
+*/
+ namespace Pixup; use GuzzleHttp\Client; use Pixup\Auth; use Pixup\Exceptions\PixupException; class Pix { private $auth; private $GnhNI; public function __construct(Auth $VADvc) { $this->auth = $VADvc; $this->GnhNI = "\x68\x74\x74\160\163\72\x2f\57\141\x70\151\x2e\x70\151\x78\x75\160\142\x72\x2e\x63\157\x6d\57\x76\62"; } public function criarQrCode(array $LEPA4) { goto cQAUJ; hqZA6: $a8RJT = $QXyyd->post("{$this->GnhNI}\57\x70\151\170\57\161\162\x63\x6f\144\145", ["\x68\145\141\x64\x65\x72\x73" => ["\101\165\x74\150\157\162\151\172\141\164\x69\157\x6e" => "\x42\145\141\162\x65\162\x20{$CcTSd}", "\103\x6f\156\x74\145\156\164\x2d\124\171\x70\x65" => "\x61\160\160\x6c\x69\143\x61\164\x69\x6f\156\57\152\x73\x6f\x6e"], "\x6a\163\157\156" => $LEPA4]); goto S8D_g; cQAUJ: if (isset($LEPA4["\141\x6d\157\x75\x6e\x74"], $LEPA4["\145\170\164\145\162\x6e\141\x6c\137\x69\x64"])) { goto MYhSI; } goto LyDea; WAGKR: $QXyyd = new Client(); goto hqZA6; qxz2A: $CcTSd = $this->auth->getToken(); goto WAGKR; PsLff: return $PCfIt; goto fTHyD; S8D_g: $PCfIt = json_decode($a8RJT->getBody(), true); goto PsLff; q1b3a: MYhSI: goto qxz2A; LyDea: throw new PixupException("\x50\141\162\303\xa2\x6d\145\164\x72\157\163\40\157\142\x72\151\147\141\x74\303\xb3\x72\x69\157\x73\x3a\40\x61\x6d\157\165\156\x74\x20\145\40\x65\170\164\x65\162\x6e\141\154\x5f\x69\144"); goto q1b3a; fTHyD: } }
